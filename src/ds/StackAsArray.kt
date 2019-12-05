@@ -49,7 +49,6 @@ class StackAsArray {
         top = -1
     }
 
-
 }
 
 fun main() {
