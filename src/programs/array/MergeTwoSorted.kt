@@ -1,5 +1,6 @@
 package programs.array
 
+// Merge Sort (also read: Two Pointer Technique)
 class MergeTwoSorted {
 
 
@@ -12,7 +13,8 @@ class MergeTwoSorted {
             var j = 0
             var k = 0
             // Traverse both array
-            while (i < n1 && j < n2) { // Check if current element of first
+            while (i < n1 && j < n2) {
+                // Check if current element of first
 // array is smaller than current element
 // of second array. If yes, store first
 // array element and increment first array
