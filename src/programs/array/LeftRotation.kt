@@ -17,9 +17,8 @@ fun main(args: Array<String>) {
     leftRotate(a, d)
 }
 
-fun leftRotate(_a: Array<Int>, _d: Int) {
+fun leftRotate(_a: Array<Int>, d: Int) {
     val a = _a.toMutableList()
-    val d = _d
     val iterations = d % a.size
 
     val tempArray1 = a.subList(iterations, a.size)
