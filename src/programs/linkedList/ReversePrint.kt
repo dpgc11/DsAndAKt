@@ -56,17 +56,22 @@ fun printSinglyLinkedList(head: SinglyLinkedListNode?, sep: String) {
  */
 fun reversePrint(_llist: SinglyLinkedListNode?) {
 
-    var llist = _llist
-    val tempList = emptyList<Int>().toMutableList()
+    val llist = _llist
+    var current = llist
+    var prev: SinglyLinkedListNode? = null
+    var next: SinglyLinkedListNode? = null
 
-    while (llist != null) {
-        tempList.add(llist.data)
-        llist = llist.next
+    while (current != null) {
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
     }
 
-    tempList.reverse()
-
-    tempList.forEach { println("$it") }
+    while (prev != null) {
+        println("${prev.data}")
+        prev = prev.next
+    }
 }
 
 fun main(args: Array<String>) {
